@@ -1,0 +1,25 @@
+<ion-view>
+
+	<ion-nav-title>
+    	<img height="40" src="fonts/emamemalogo.png">
+    </ion-nav-title>
+
+
+
+    <ion-content overflow-scroll="true" class="has-header">
+		<!-- <ion-refresher
+    		pulling-text="Pull to refresh..."
+    		on-refresh="doRefresh()">
+  		</ion-refresher> -->
+
+		<div class="list">
+			<div class="item item-divider">Archived</div>
+			<a ng-repeat="swipedCard in swipedCards track by $index" class="item item-thumbnail-left" href="#">
+		      <img src="{{swipedCard.image}}">
+		      <h2>{{swipedCard.title}}</h2>
+		      <p>{{swipedCard.description}}</p>
+		    </a>
+		</div>
+	</ion-content>
+
+</ion-view>

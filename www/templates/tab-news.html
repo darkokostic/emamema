@@ -1,0 +1,38 @@
+<ion-view class="tab-news">
+
+	<ion-nav-title>
+    	<img height="40" src="fonts/emamemalogo.png">
+    </ion-nav-title>
+
+    <!-- <div class="bar bar-subheader">
+  		<h2 class="title">Ultimi annunci e notizie</h2>
+	</div> -->
+
+    <ion-content overflow-scroll="true" padding="true">
+		<swipe-cards>
+	      <swipe-card on-card-swipe="cardSwiped(0)" id="start-card">
+	        Swipe down for a new card
+	      </swipe-card>
+	      <swipe-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-card-swipe="cardSwiped(card.id)">
+	        <div ng-controller="CardCtrl">
+	          <div class="title">
+	            {{card.title}}
+	          </div>
+			  <div class="card-date">
+			  	<p>{{card.date}}</p>
+			  </div>
+	          <div class="image">
+	            <img ng-src="{{card.image}}">
+	          </div>
+			  <div class="card-description">
+				  <p>{{card.description}}</p>
+			  </div>
+	          <div class="button-bar">
+	            <a href="{{card.link}}" class="button button-clear button-positive">Scoprsi di piu</a>
+	            <button class="button button-clear button-positive scarta-button" ng-click="goAway()">Scarta</button>
+	          </div>
+	        </div>
+	      </swipe-card>
+    </swipe-cards>
+	</ion-content>
+</ion-view>
